@@ -21,7 +21,7 @@ describe('Teste de Burnout', () => {
         cy.get('.btn-text').click()
         cy.quizPart1()
         cy.toSend()
-            .should('contain', '')
+            .should('contain', 'Tudo sob controle! Continue assim')
     })
 
     it('Fique de olho!', () => {
