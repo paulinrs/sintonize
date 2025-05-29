@@ -28,7 +28,7 @@ Este repositório é dedicado aos **testes automatizados** do projeto Sintonize,
 
 - Scripts de testes automatizados.
 - Configurações do Cypress para garantir a qualidade da aplicação.
-- Anotações e experimentos relacionados à garantia de qualidade.
+
 
 
 
