@@ -1,0 +1,17 @@
+{
+  "name": "cypress_sintonize",
+  "version": "1.0.0",
+  "description": "Testes automatizados com Cypress",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "Paulo Roberto",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  }
+}
+
