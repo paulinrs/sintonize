@@ -8,7 +8,7 @@
     "cypress:run": "cypress run"
   },
   "keywords": [],
-  "author": "Paulo Roberto",
+  "author": "Paulo Santos",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.0.0"
