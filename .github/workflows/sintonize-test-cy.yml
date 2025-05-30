@@ -1,6 +1,9 @@
 name: Sintonize Tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - '**'
 
 jobs:
   cypress-electron-tests:
