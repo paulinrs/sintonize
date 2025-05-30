@@ -38,9 +38,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Apply Django migrations
-        run: python manage.py migrate
-
       - name: Start Django server
         run: python manage.py runserver 0.0.0.0:8000 &
 
