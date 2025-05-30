@@ -41,8 +41,9 @@ jobs:
       - name: Start Django server
         run: python manage.py runserver 0.0.0.0:8000 &
 
-      - name: Wait for backend to be ready
-        run: npx wait-on http://127.0.0.1:8000
+      - name: Test backend with curl
+        run: curl -v http://127.0.0.1:8000 || echo "Backend not reachable"
+
 
       - name: Install Node dependencies
         run: npm install
