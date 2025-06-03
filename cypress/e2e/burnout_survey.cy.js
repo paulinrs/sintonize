@@ -1,7 +1,7 @@
 describe('Teste de Burnout', () => {
 
     it('Navegação e Validação do Formulário.', () => {
-        cy.selectNumber(5)
+        cy.selectMenuByText('Sondagem de Burnout')
         cy.get('.btn-text').click()
         cy.get('#nextBtn').click()
         cy.get('#error-1')
