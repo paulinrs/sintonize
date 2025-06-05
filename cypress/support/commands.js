@@ -25,13 +25,14 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('selectNumber', (childNumber) => {
-    cy.visit('/')
-    cy.get(`li:nth-child(${childNumber}) > a`)
+Cypress.Commands.add('selectMenuByText', (menuText) => {
+  cy.visit('/')
+  cy.get('li')
+    .contains(menuText)
     .should('be.visible')
     .click()
-
 })
+
 
 Cypress.Commands.add('quizPart1', () => {
 
