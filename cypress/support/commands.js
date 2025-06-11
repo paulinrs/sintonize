@@ -424,3 +424,11 @@ Cypress.Commands.add('always', () => {
     cy.get('#sendBtn').click();
 
 })
+
+Cypress.Commands.add('selectMenuByText', (menuText) => {
+  cy.visit('/')
+  cy.get('li')
+    .contains(menuText)
+    .should('be.visible')
+    .click()
+})
