@@ -49,7 +49,7 @@ describe('Teste de Burnout', () => {
         cy.quizPart4()
 
         cy.toSend()
-            .should('have.text', 'Risco Alto de Burnout! Procure Ajuda')
+            .should('have.text', 'Risco Alto de Burnout! Procure Ajuda ')
 
  })
 
@@ -59,7 +59,7 @@ describe('Teste de Burnout', () => {
         cy.quizPart5()
 
         cy.toSend()
-            .should('have.text', 'Nível Crítico de Burnout! Procure Ajuda')
+            .should('have.text', 'Nível Crítico de Burnout! Procure Ajuda ')
 
 
     })
