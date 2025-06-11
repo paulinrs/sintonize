@@ -1,7 +1,7 @@
 describe('Teste de Burnout', () => {
 
     it('Navegação e Validação do Formulário.', () => {
-        cy.selectNumber(5)
+        cy.selectMenuByText('Sondagem de Burnout')
         cy.get('.btn-text').click()
         cy.get('#nextBtn').click()
         cy.get('#error-1')
@@ -12,8 +12,7 @@ describe('Teste de Burnout', () => {
         cy.get('#prevBtn').click();
         cy.get('#id_statement_1_2').check();
         cy.get('#question-1 > .radio-container > :nth-child(3) > .ml-3')
-            .should('be.visible')
-            .should('contain', 'Às Vezes')
+            .should('have.text', 'Às Vezes');
     })
 
     it('Tudo sob controle!', () => {
@@ -21,7 +20,7 @@ describe('Teste de Burnout', () => {
         cy.get('.btn-text').click()
         cy.quizPart1()
         cy.toSend()
-            .should('contain', 'Tudo sob controle! Continue assim')
+            .should('have.text', 'Tudo sob controle! Continue assim')
     })
 
     it('Fique de olho!', () => {
@@ -30,7 +29,7 @@ describe('Teste de Burnout', () => {
         cy.quizPart2()
 
         cy.toSend()
-        .should('contain', 'Fique de olho! Pequenos sinais de estresse')
+        .should('have.text', 'Fique de olho! Pequenos sinais de estresse')
 
 })
 
@@ -40,7 +39,7 @@ describe('Teste de Burnout', () => {
         cy.quizPart3()
 
         cy.toSend()
-            .should('contain', 'Possível Risco de Burnout! Hora de Prevenir')
+            .should('have.text', 'Possível Risco de Burnout! Hora de Prevenir')
 
     })
 
@@ -50,7 +49,7 @@ describe('Teste de Burnout', () => {
         cy.quizPart4()
 
         cy.toSend()
-            .should('contain', 'Risco Alto de Burnout! Procure Ajuda')
+            .should('have.text', 'Risco Alto de Burnout! Procure Ajuda ')
 
  })
 
@@ -60,7 +59,7 @@ describe('Teste de Burnout', () => {
         cy.quizPart5()
 
         cy.toSend()
-            .should('contain', 'Nível Crítico de Burnout! Procure Ajuda')
+            .should('have.text', 'Nível Crítico de Burnout! Procure Ajuda ')
 
 
     })

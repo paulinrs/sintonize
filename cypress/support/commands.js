@@ -25,13 +25,14 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('selectNumber', (childNumber) => {
-    cy.visit('/')
-    cy.get(`li:nth-child(${childNumber}) > a`)
+Cypress.Commands.add('selectMenuByText', (menuText) => {
+  cy.visit('/')
+  cy.get('li')
+    .contains(menuText)
     .should('be.visible')
     .click()
-
 })
+
 
 Cypress.Commands.add('quizPart1', () => {
 
@@ -422,4 +423,12 @@ Cypress.Commands.add('always', () => {
     cy.get('#id_statement_12_4').check();
     cy.get('#sendBtn').click();
 
+})
+
+Cypress.Commands.add('selectMenuByText', (menuText) => {
+  cy.visit('/')
+  cy.get('li')
+    .contains(menuText)
+    .should('be.visible')
+    .click()
 })
